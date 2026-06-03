@@ -1,0 +1,19 @@
+# Array manipulation 2
+
+
+x=[4,2,8]
+y=[1,7,6]
+for i in range(len(y)):
+    idx=y[i]
+    if idx>len(x):
+        print(f"{y[i]} out of index")
+    else:
+        x.insert(idx,y[i])
+print(x)               
+			# 6 out of index
+			# [4, 1, 2, 8]
+
+o/p:
+7 out of index
+6 out of index
+[4, 1, 2, 8]
