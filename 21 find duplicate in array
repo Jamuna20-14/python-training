@@ -1,0 +1,26 @@
+# find duplicate in array
+
+num =int(input("Enter the no of element:"))
+arr=[]
+dup=[]
+for i in range(num):
+	arr.append(input("Enter the data:"))
+
+value=[]
+for i in arr:
+    if i not in dup:
+        dup.append(i)
+    elif i not in value:
+        value.append(i)
+print(arr)
+print(dup)
+
+o/p:
+Enter the no of element:5
+Enter the data:12
+Enter the data:34
+Enter the data:67
+Enter the data:9
+Enter the data:12
+['12', '34', '67', '9', '12']
+['12', '34', '67', '9']
