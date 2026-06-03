@@ -1,0 +1,17 @@
+# Protected attribute
+
+class student:
+    def __init__(self,name,number):
+        self.name=name
+        self._number=number 
+class clg(student):
+    def data(self):
+        print(self._number)    
+std = clg("joe",2345678901)
+print(std.name)
+std.data()
+
+
+o/p:
+joe
+2345678901
