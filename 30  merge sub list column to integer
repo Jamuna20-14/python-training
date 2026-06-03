@@ -1,0 +1,16 @@
+# merge sub list column to integer
+
+lists=[[3,1],[5,6],[5]]
+max_c=max(len(sub_list) for sub_list in lists)
+res=[]
+for i in range(max_c):
+    temp=""
+    for sub_num in lists:
+        if i <len(sub_num):
+            temp+=str(sub_num[i])
+    res.append(temp)
+print(res)			
+
+
+o/p:
+['355', '16']
