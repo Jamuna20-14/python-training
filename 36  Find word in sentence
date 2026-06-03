@@ -1,0 +1,18 @@
+# Find word in sentence
+
+name="data structure algorithm"
+sub="data"
+lists=list(map(str,name.split()))
+flag=None
+for word in lists:
+    if sub==word:
+        flag=True
+        break
+if flag:
+    print("Found")
+else:
+    print("Not found")	
+
+
+o/p:
+Found
