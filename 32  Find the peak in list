@@ -1,0 +1,19 @@
+# Find the peak in list
+
+arr = [1, 3, 20, 4, 1, 0, 5, 2]
+n=len(arr)
+res=[]
+for i in range(n):
+    if i == 0:
+        if arr[i]>arr[i+1]:
+            res.append(i)
+    elif i==n-1:
+        if arr[i]>arr[i-1]:
+            res.append(i)
+    else:
+        if arr[i-1]<arr[i] and arr[i]>arr[i+1]:
+            res.append(i)
+print(res)		
+
+o/p:
+[2, 6]
