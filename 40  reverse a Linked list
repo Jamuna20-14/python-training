@@ -1,0 +1,44 @@
+# reverse a Linked list
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class linkedlist:
+    def __init__(self):
+        self.head=None
+    def push(self,new_data):
+        new_node=node(new_data)
+        new_node.next=self.head
+        self.head=new_node
+    def printlist(self):
+        current=self.head
+        while(current):
+            print(current.data,end=" ")
+            current=current.next
+ll=linkedlist()
+ll.push(20)
+ll.push(4)
+ll.push(15)
+ll.push(85)
+
+print("given linked list")
+ll.printlist()
+
+prev=None
+curr=ll.head
+while(curr is not None):
+    next=curr.next
+    curr.next=prev
+    prev=curr
+    curr=next
+ll.head=prev
+
+print("\n Reversed linked list:")
+ll.printlist()
+
+o/p:
+given linked list
+85 15 4 20 
+ Reversed linked list:
+20 4 15 85 
