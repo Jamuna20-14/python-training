@@ -1,0 +1,19 @@
+#Even numbers by using class
+
+class EvenNumber:
+    def get_numbers(self):
+        self.numbers = list(map(int, input("Enter numbers separated by space:  ").split()))
+
+    def print_even(self):
+        print("Even numbers are:")
+        for num in self.numbers:
+            if num % 2 == 0:
+                print(num, end=" ")
+obj = EvenNumber()
+obj.get_numbers()
+obj.print_even()
+
+o/p:
+Enter numbers separated by space:  34 87 32 80 31
+Even numbers are:
+34 32 80 
