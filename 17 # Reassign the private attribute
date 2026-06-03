@@ -1,0 +1,25 @@
+# Reassign the private attribute
+
+class Student:
+    def __init__(self, name, number):
+        self.name = name       
+        self.__number = number 
+
+    def demo(self):
+        self.__number = 9865431492  
+
+    def get_number(self):
+        return self.__number
+
+
+std = Student("jamuna", 9865431492)
+
+print(std.name)
+
+std.demo()  
+
+print(std.get_number())  
+
+o/p:
+jamuna
+9865431492
