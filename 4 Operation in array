@@ -1,0 +1,16 @@
+# Operation in array
+
+x=[1,2,3,4]
+y=[3,5]
+x.extend(y)
+print(x)
+
+x.insert(1,5)
+print(x)
+y=x.count(2)
+print(y)
+
+o/p:
+[1, 2, 3, 4, 3, 5]
+[1, 5, 2, 3, 4, 3, 5]
+1
