@@ -1,0 +1,16 @@
+# Class, Object and Methods
+
+class car:
+    def __init__(self,arr1,arr2):
+        self.arr01=arr1
+        self.arr02=arr2
+    def addi(self):
+        z=self.arr01+self.arr02
+        print(z)
+x=[1,2,3]
+y=[4,5,6]
+cars= car(x,y)
+cars.addi()
+
+o/p:
+[1, 2, 3, 4, 5, 6]
