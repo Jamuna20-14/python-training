@@ -1,0 +1,21 @@
+#Abstraction
+
+from abc import ABC, abstractmethod
+class car(ABC):
+    def data(self):
+        print("say hello")
+    def xyz(self):
+        print("10")
+class BMW(car):
+    def data(self):
+        self.__x=10
+        return "say hai"
+    def xyz(self):
+        print("20")
+bmw=BMW()
+print(bmw.data())
+bmw.xyz()
+
+o/p:
+say hai
+20
