@@ -1,0 +1,19 @@
+#Accessing mulitiple class using For loop
+
+class mca:
+    def student(self):
+        print("deva")
+class bca:
+    def student(self):
+        print("bala")
+class msc:
+    def student(self):
+        print("suriya")
+smvc = [mca(),bca(),msc()]
+for clg in smvc:
+    clg.student()
+
+o/p:
+deva
+bala
+suriya
