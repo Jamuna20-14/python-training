@@ -1,0 +1,39 @@
+# Find odd and even by splitting integer
+
+class number:
+    def __init__(self,data):
+         self.data=data
+    def check(self):
+        firstnum = self.data// 100
+        lastnum = self.data% 100
+        if firstnum % 2 == 0:
+            print("First 2 digit number", firstnum, "is Even")
+        else:
+            print("First 2 digit number", firstnum, "is Odd")
+        if lastnum % 2 == 0:
+            print("Last 2 digit number", lastnum, "is Even")
+        else:
+            print("Last 2 digit number", lastnum, "is Odd")
+    def stringnum(self):
+        numstring=str(self.data)
+        firstnum=int(numstring[:2])
+        lastnum=int(numstring[2:])
+        if firstnum % 2 == 0:
+            print("First 2 digit number", firstnum, "is Even")
+        else:
+            print("First 2 digit number", firstnum, "is Odd")
+        if lastnum % 2 == 0:
+            print("Last 2 digit number", lastnum, "is Even")
+        else:
+            print("Last 2 digit number", lastnum, "is Odd")
+obj = number(5562)
+obj.check()
+obj.stringnum()
+
+
+
+o/p:
+First 2 digit number 55 is Odd
+Last 2 digit number 62 is Even
+First 2 digit number 55 is Odd
+Last 2 digit number 62 is Even
