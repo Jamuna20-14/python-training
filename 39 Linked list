@@ -1,0 +1,119 @@
+# Linked list
+
+class Node:
+    def __init__ (self,data):
+        self.data=data
+        self.next=None
+head=Node(0)
+head.next=Node(1)
+head.next.next=Node(2)
+
+current=head
+while current:
+    print(current.data,end="=>")
+    current=current.next
+print("none")
+
+
+class node:
+    def __init__ (self,data):
+        self.data=data
+        self.next=None
+node1=node(0)
+node2=node(1)
+node3=node(2)
+node4=node(3)
+
+node1.next=node2
+node2.next=node3
+node3.next=node4
+
+head=node1
+current=head
+while current:
+    print(current.data,end="=>")
+    current=current.next
+print("none")
+
+
+# operations in linked list
+
+
+class node:
+    def __init__ (self,data):
+        self.data=data
+        self.next=None
+
+def insertAtStart(head,data):
+    new_node=node(data)
+    new_node.next=head
+    return new_node
+
+def insertAtEnd(head,data):
+    new_node=node(data)
+    if head is None:
+        return new-node
+    current=head
+    while current.next:
+        current=current.next
+    current.next=new_node
+    return head
+
+def deleteAtStart(head):
+    if head is None:
+        print("Error: singly inked list is empty")
+        return None
+    new_head=head.next
+    del head
+    return new_head
+
+def deleteAtEnd(head):
+    if head is None:
+        print("Error: singly inked list is empty")
+        return None
+    if head.next is None:
+        return None
+
+    current = head
+
+    while current.next.next is not None:
+        current = current.next
+
+    current.next = None
+    return head
+    
+def search(head, key):
+    temp = head
+    pos = 1
+
+    while temp:
+        if temp.data == key:
+            print("Element Found at Position", pos)
+            return
+
+        temp = temp.next
+        pos += 1
+
+    print("Element Not Found")
+
+def traverse(head):
+    current = head
+    while current:
+        print(current.data,end="=>")
+        current=current.next
+    print("none")
+
+head=None
+head=insertAtStart(head,4)
+head=insertAtStart(head,3)
+head=insertAtStart(head,2)
+head=insertAtStart(head,1)
+
+key = int(input("Enter element to search: "))
+search(head, key)
+    
+o/p:
+0=>1=>2=>none
+0=>1=>2=>3=>none
+Enter element to search: 1
+Element Found at Position 1
