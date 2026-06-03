@@ -1,0 +1,28 @@
+# merge sub list column to integer
+
+
+matrix = [
+    [4, 2],
+    [9, 7, 3],
+    [1]
+]
+max_col=max(len(sub_arr) for sub_arr in matrix)
+res=[]
+flag=True
+for i in range(max_col):
+    temp=""
+    if flag:
+        for sub_list in matrix:
+            if i<len(sub_list):
+                temp+=str(sub_list[i])
+        flag=False
+    else:
+        for sub_list in reversed(matrix):
+            if i<len(sub_list):
+                temp+=str(sub_list[i])
+        flag=True
+    res.append(temp)
+print(res)		
+
+o/p:
+['491', '72', '3']
