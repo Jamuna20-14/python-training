@@ -1,0 +1,39 @@
+# Multiple Inheritence 2
+
+class Student:
+    def student_details(self):
+        self.name = input("Enter Student Name: ")
+        self.rollno = int(input("Enter Roll Number: "))
+
+
+class Sports:
+    def sports_details(self):
+        self.game = input("Enter Game Name: ")
+        self.score = int(input("Enter Score: "))
+
+
+class SportsDay(Student, Sports):
+    def display(self):
+        print("\n Sports Day Details ")
+        print("Name :", self.name)
+        print("Roll No :", self.rollno)
+        print("Game :", self.game)
+        print("Score :", self.score)
+        
+s = SportsDay()
+s.student_details()
+s.sports_details()
+s.display()
+
+o/p:
+Enter Student Name: jodha
+Enter Roll Number: 105
+Enter Game Name: foot ball
+Enter Score: 500
+
+ Sports Day Details 
+Name : jodha
+Roll No : 105
+Game : foot ball
+Score : 500
+
