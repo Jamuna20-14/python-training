@@ -1,0 +1,20 @@
+# Multilevel Inheritence
+
+class grandpa:
+    def __init__ (self,grandpaname):
+        self.grandpaname=grandpaname
+class father(grandpa):
+    def __init__(self,grandpaname,fathername):
+        grandpa.__init__(self,grandpaname)
+        self.fathername=fathername
+class child(father):
+    def __init__(self,grandpaname,fathername,sonname):
+        father.__init__(self,grandpaname,fathername)
+        self.sonname=sonname
+    def display(self):
+        print(self.sonname,self.fathername,self.grandpaname)
+obj = child("deva","dinesh","kumar")
+obj.display()
+
+o/p:
+kumar dinesh deva
