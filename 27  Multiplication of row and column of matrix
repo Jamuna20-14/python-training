@@ -1,0 +1,47 @@
+# Multiplication of row and column of matrix
+
+
+r = int(input("Enter rows: "))
+c = int(input("Enter columns: "))
+
+a = []
+print("Enter First Matrix:")
+for i in range(r):
+    row = []
+    for j in range(c):
+        row.append(int(input()))
+    a.append(row)
+
+b = []
+print("Enter Second Matrix:")
+for i in range(r):
+    row = []
+    for j in range(c):
+        row.append(int(input()))
+    b.append(row)
+
+print("Multiplication:")
+for i in range(r):
+    for j in range(c):
+        s = 0
+        for k in range(c):
+            s = s + a[i][k] * b[k][j]
+        print(s, end=" ")
+    print()
+
+o/p:
+Enter rows: 2
+Enter columns: 2
+Enter First Matrix:
+1
+2
+6
+9
+Enter Second Matrix:
+4
+3
+8
+5
+Multiplication:
+20 13 
+96 63 
