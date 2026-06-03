@@ -1,0 +1,19 @@
+# Encapsulation (private)
+
+class Student:
+    def __init__(self, name, number):
+        self.name = name
+        self.__number = number   
+        
+    def get_number(self):
+        return self.__number
+
+
+std = Student("Dinesh", 7339791231)
+
+print(std.name)          
+print(std.get_number())  
+
+o/p:
+Dinesh
+7339791231
