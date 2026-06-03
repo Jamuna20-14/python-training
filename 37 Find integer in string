@@ -1,0 +1,11 @@
+# Find integer in string
+
+string="jamuna123mona758priya"
+res=0
+for i in string:
+    if i.isdigit():
+        res=res*10+int(i)
+print(res)			
+
+o/p:
+123758
