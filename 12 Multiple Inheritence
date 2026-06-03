@@ -1,0 +1,22 @@
+# Multiple Inheritence
+
+class father:
+    def demo1(self):
+        self.x="daughter"
+        print("pandiyan")
+class mother:
+    def demo2(self):
+        self.y="nishanthi"
+        print("sangeetha")
+class daughter(father,mother):
+    def demo3(self):
+        print(self.x,self.y)
+obj = daughter()
+obj.demo1()
+obj.demo2()
+obj.demo3()
+
+o/p:
+pandiyan
+sangeetha
+daughter nishanthi
