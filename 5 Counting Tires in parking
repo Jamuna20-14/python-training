@@ -1,0 +1,12 @@
+#Counting Tires in parking
+
+total=600
+cars=100
+balance=total-(cars*4)
+bikes=balance/2
+print("total number of cares:",cars)
+print("total number of bikes:",bikes)
+
+o/p:
+total number of cares: 100
+total number of bikes: 100.0
