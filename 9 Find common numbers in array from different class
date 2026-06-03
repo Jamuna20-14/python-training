@@ -1,0 +1,24 @@
+#Find common numbers in array from different class
+
+class MCA:
+    def values(self):
+        return [10, 20, 30, 40]
+class BCA:
+    def values(self):
+        return [50, 20, 30, 70]
+class MSC:
+    def values(self):
+        return [30, 20, 90, 100]
+clg = [MCA(), BCA(), MSC()]
+list1= []
+
+for obj in clg:
+    list1.append(obj.values())
+common = set(list1[0])
+
+for lst in list1[1:]:
+    common = common.intersection(lst)
+print("comman value in the lists:", list(common))
+
+o/p:
+comman value in the lists: [20, 30]
