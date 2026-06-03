@@ -1,0 +1,13 @@
+# Find integer in string using regex
+
+import re
+
+text="jamuna123dev758mahir"
+
+match = [ int(i) for i in re.findall("[0-9]", text)]
+
+print(match)			
+
+
+o/p:
+[1, 2, 3, 7, 5, 8]
