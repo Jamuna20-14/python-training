@@ -1,0 +1,48 @@
+# Matrix addition
+
+mat1 = [[1, 2, 3],
+        [3, 2, 1],
+        [3, 2, 1]]
+
+mat2 = [[1, 2, 3],
+        [3, 2, 1],
+        [3, 2, 1]]
+
+print("Matrix 1")
+for row in mat1:
+    for num in row:
+        print(num, end=" ")
+    print()
+
+print("Matrix 2")
+for row in mat2:
+    for num in row:
+        print(num, end=" ")
+    print()
+
+res = []
+
+for i in range(len(mat1)):
+    row = []
+    for j in range(len(mat1[0])):
+        row.append(mat1[i][j] + mat2[i][j])
+    res.append(row)
+
+print("Matrix Addition")
+for row in res:
+    for num in row:
+        print(num, end=" ")
+    print()
+o/p:
+Matrix 1
+1 2 3 
+3 2 1 
+3 2 1 
+Matrix 2
+1 2 3 
+3 2 1 
+3 2 1 
+Matrix Addition
+2 4 6 
+6 4 2 
+6 4 2 
