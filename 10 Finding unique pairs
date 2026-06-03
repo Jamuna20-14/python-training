@@ -1,0 +1,15 @@
+# Finding unique pairs
+
+set1 = {7,2}
+set2 = {8,2}
+pairs = []
+for i in set1:
+    for j in set2:
+        pairs.append((i, j))
+for j in set2:
+    for i in set1:
+        pairs.append((j, i))
+print(pairs)
+
+o/p:
+[(2, 8), (2, 2), (7, 8), (7, 2), (8, 2), (8, 7), (2, 2), (2, 7)]
