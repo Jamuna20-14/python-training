@@ -1,0 +1,135 @@
+1)DIGARR - Re Arranging digits
+
+code:
+# cook your dish here
+T = int(input())
+
+for _ in range(T):
+    D = int(input())
+    N = input().strip()
+
+    if '0' in N or '5' in N:
+        print("Yes")
+    else:
+        print("No")
+
+o/p:
+Yes
+Yes
+No
+
+
+2)DOLL -  Red light Green light
+import sys
+
+T = int(input())
+for _ in range(T):
+    N, K = map(int, input().split())
+    H = list(map(int, input().split()))
+    
+    count = 0
+    for h in H:
+        if h > K:
+            count += 1
+    
+    print(count)
+    o/p:
+    2
+1
+0
+
+3)MOOCHECF - Moody Chef
+# cook your dish here
+import sys
+
+T = int(input())
+
+for _ in range(T):
+    N, l, r = map(int, input().split())
+    A = list(map(int, input().split()))
+    
+    happiness = 0
+    max_h = 0
+    min_h = 0
+    
+    for x in A:
+        if l <= x <= r:
+            happiness += 1
+        else:
+            happiness -= 1
+        
+        max_h = max(max_h, happiness)
+        min_h = min(min_h, happiness)
+    
+    print(max_h, min_h)
+    o/p:
+    2 -1
+    0 -2
+
+    4)ZOOZ - zero once equal one zeros
+    T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    
+    # alternate pattern works
+    res = []
+    for i in range(N):
+        if i % 2 == 0:T = int(input())
+
+vowels = set("aeiou")
+
+for _ in range(T):
+    N = int(input())
+    S = input().strip()
+    
+    count = 0
+    easy = True
+    
+    for ch in S:
+        if ch not in vowels:
+            count += 1
+            if count >= 4:
+                easy = False
+        else:
+            count = 0
+    
+    print("YES" if easy else "NO")
+            res.append('0')
+        else:
+            res.append('1')
+    # cook your dish here
+T = int(input())
+
+vowels = set("aeiou")
+
+for _ in range(T):
+    N = int(input())
+    S = input().strip()
+    
+    count = 0
+    easy = True
+    
+    for ch in S:
+        if ch not in vowels:
+            count += 1
+            if count >= 4:
+                easy = False
+        else:
+            count = 0
+    
+    print("YES" if easy else "NO")
+
+    o/p:
+    YES
+NO
+YES
+NO
+YES
+    print("".join(res))
+    o/p:
+    0101
+    010
+
+  5)EZSPEAK - Easy Pronunciation
+  
