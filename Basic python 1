@@ -1,0 +1,517 @@
+1)"Accept a user's name and print a welcome message.
+name = input("Enter your name: ")
+print("Welcome", name)
+
+o/p:
+Welcome Jamuna
+
+2)Accept two numbers and display their sum.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Sum =", a + b)
+
+o/p:
+Sum = 8
+
+3)Accept a student's name and marks and display them.
+name = input("Enter student's name: ")
+marks = int(input("Enter marks: "))
+print("Student Name:", name)
+print("Marks:", marks)
+
+o/p:
+Student Name: joe
+Marks: 85
+
+4)Accept a city name and print it in uppercase.
+city = input("Enter city name: ")
+print(city.upper())
+
+o/p:
+CHENNAI
+
+5)Take input for length and breadth and calculate area.
+length = float(input("Enter length: "))
+breadth = float(input("Enter breadth: "))
+area = length * breadth
+print("Area =", area)
+
+o/p:
+Enter length: 5
+Enter breadth: 3
+
+6)Assign multiple values to multiple variables.
+x, y, z = 5, 10, 15
+print(x)
+print(y)
+print(z)
+
+o/p:
+5
+10
+15
+
+7)Assign the same value to three variables.
+a = b = c = 50
+print(a)
+print(b)
+print(c)
+
+o/p:
+50
+50
+50
+
+8)Exchange values of two variables.
+a = 10
+b = 20
+a, b = b, a
+print("a =", a)
+print("b =", b)
+
+o/p:
+a = 20
+b = 10
+
+9)Calculate total marks using variables.
+math = 85
+science = 90
+english = 80
+total = math + science + english
+print("Total Marks =", total)
+
+o/p:
+Total Marks = 255
+
+10)Store and display employee information.
+emp_id = 101
+emp_name = "Arun"
+emp_salary = 45000
+print("Employee Details")
+print("ID:", emp_id)
+print("Name:", emp_name)
+print("Salary:", emp_salary)
+
+o/p:
+Employee Details
+ID: 101
+Name: Arun
+Salary: 45000
+
+11)Create a string and print it.
+message = "Hello, World!"
+print(message)
+
+o/p:
+Hello, World!
+
+12)Print the first character of a string.
+s = input("Enter a string: ")
+print(s[0])
+
+o/p:
+Enter a string: python
+p
+
+13)Print the last character of a string.
+s = input("Enter a string: ")
+print(s[-1])
+
+o/p:
+Enter a string: jodha
+a
+
+14)Find the length of a string.
+s = input("Enter a string: ")
+print(s[-1])
+
+o/p:
+Enter a string: jodha
+a
+
+15)Convert a string to uppercase.
+s = input("Enter a string: ")
+print(s.upper())
+
+o/p:
+Enter a string: mona
+MONA
+
+16)Convert a string to lowercase.
+s = input("Enter a string: ")
+print(s.lower())
+
+o/p:
+Enter a string: ANU
+anu
+
+17)Reverse a string.
+s = input("Enter a string: ")
+print(s[::-1])
+
+o/p:
+Enter a string: car
+rac
+
+18)Check whether a character exists in a string.
+s = input("Enter a string: ")
+ch = input("Enter a character: ")
+
+if ch in s:
+    print("Yes")
+else:
+    print("No")
+
+o/p:
+Enter a string: mogana
+Enter a character: n
+Yes
+
+19)Count vowels in a string.
+s = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+count = 0
+for ch in s:
+    if ch in vowels:
+        count += 1
+print(count)
+
+o/p:
+Enter a string: janu
+2
+
+20)Add two integers.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print(a + b)
+
+o/p:
+Enter first number: 30
+Enter second number: 20
+50
+
+21)Multiply two floating-point numbers.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print(a * b)
+
+o/p:
+Enter first number: 20
+Enter second number: 40
+800.0
+
+22)Calculate simple interest.
+P = float(input("Enter Principal: "))
+R = float(input("Enter Rate of Interest: "))
+T = float(input("Enter Time (years): "))
+SI = (P * R * T) / 100
+print("Simple Interest =", SI)
+
+o/p:
+Enter Principal: 20
+Enter Rate of Interest: 35
+Enter Time (years): 15
+Simple Interest = 105.0
+
+23)Find the square and cube of a number.
+n = int(input("Enter a number: "))
+
+square = n ** 2
+cube = n ** 3
+
+print("Square =", square)
+print("Cube =", cube)
+
+o/p:
+Enter a number: 5
+Square = 25
+Cube = 125
+
+
+24)Calculate the average of three numbers.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+average = (a + b + c) / 3
+print("Average =", average)
+
+o/p:
+Enter first number: 3
+Enter second number: 5
+Enter third number: 2
+Average = 3.3333333333333335
+
+25)Perform arithmetic operations on two numbers.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("Addition =", a + b)
+print("Subtraction =", a - b)
+print("Multiplication =", a * b)
+print("Division =", a / b)
+
+o/p:
+Enter first number: 4
+Enter second number: 2
+Addition = 6.0
+Subtraction = 2.0
+Multiplication = 8.0
+Division = 2.0
+
+26)Create and display a complex number.
+real = float(input("Enter real part: "))
+imag = float(input("Enter imaginary part: "))
+z = complex(real, imag)
+print("Complex Number =", z)
+
+o/p:
+Enter real part: 3
+Enter imaginary part: 5
+Complex Number = (3+5j)
+
+
+27)Find the largest of three numbers.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+largest = max(a, b, c)
+print("Largest number =", largest)
+
+o/p:
+Enter first number: 6
+Enter second number: 3
+Enter third number: 2
+Largest number = 6.0
+
+28)Create a list of 5 numbers.
+numbers = [10, 20, 30, 40, 50]
+print(numbers)
+
+o/p:
+[10, 20, 30, 40, 50]
+
+29)Print the first and last elements.
+numbers = [10, 20, 30, 40, 50]
+print("First element =", numbers[0])
+print("Last element =", numbers[-1])
+
+o/p:
+First element = 10
+Last element = 50
+
+30)Add a new element to the list.
+numbers = [10, 20, 30, 40, 50]
+numbers.append(60)
+print(numbers)
+
+o/p:[10, 20, 30, 40, 50, 60]
+
+31)Remove an element from the list.
+numbers = [10, 20, 30, 40, 50]
+numbers.remove(30)
+print(numbers)
+
+o/p:[10, 20, 40, 50]
+
+32)Find the length of the list.
+numbers = [10, 20, 30, 40, 50]
+print(len(numbers))
+
+o/p:
+5
+
+33)Create a set of numbers.
+numbers = {10, 20, 30, 40, 50}
+print(numbers)
+
+o/p:
+{50, 20, 40, 10, 30}
+
+34)Add an element to a set.
+numbers = {10, 20, 30, 40, 50}
+numbers.add(60)
+print(numbers)
+
+o/p:
+{50, 20, 40, 10, 60, 30}
+
+35)Remove an element from a set.
+numbers = {10, 20, 30, 40, 50}
+numbers.remove(30)
+print(numbers)
+
+o/p:
+{50, 20, 40, 10}
+
+36)Create Boolean variables with True and False.
+a = True
+b = False
+print(a)
+print(b)
+
+o/p:
+True
+False
+
+37)Check whether a number is positive.
+num = float(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+else:
+    print("Not Positive")
+o/p:
+Enter a number: 6
+Positive
+
+38)Check whether a number is even.
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+o/p:
+Enter a number: 8
+Even
+
+39)Student Mark Calculator
+name = input("Enter student name: ")
+
+math = float(input("Enter Math marks: "))
+science = float(input("Enter Science marks: "))
+english = float(input("Enter English marks: "))
+
+total = math + science + english
+average = total / 3
+
+print("\nStudent Details")
+print("Name:", name)
+print("Total Marks:", total)
+print("Average Marks:", average)
+
+o/p:
+Enter student name: jamuna
+Enter Math marks: 95
+Enter Science marks: 96
+Enter English marks: 93
+
+Student Details
+Name: jamuna
+Total Marks: 284.0
+Average Marks: 94.66666666666667
+
+40)BMI Calculator
+weight = float(input("Enter weight in kg: "))
+height = float(input("Enter height in meters: "))
+bmi = weight / (height ** 2)
+print("BMI =", bmi)
+
+o/p:
+Enter weight in kg: 60
+Enter height in meters: 155
+BMI = 0.002497398543184183
+
+41)Temperature Converter
+choice = input("Enter C to convert Celsius to Fahrenheit or F to convert Fahrenheit to Celsius: ")
+
+if choice == "C" or choice == "c":
+    c = float(input("Enter temperature in Celsius: "))
+    f = (c * 9/5) + 32
+    print("Temperature in Fahrenheit =", f)
+
+elif choice == "F" or choice == "f":
+    f = float(input("Enter temperature in Fahrenheit: "))
+    c = (f - 32) * 5/9
+    print("Temperature in Celsius =", c)
+
+else:
+    print("Invalid choice")
+
+o/p:
+Enter C to convert Celsius to Fahrenheit or F to convert Fahrenheit to Celsius: c
+Enter temperature in Celsius: 100
+Temperature in Fahrenheit = 212.0
+
+42)Currency Converter:
+print("Currency Converter")
+
+amount = float(input("Enter amount: "))
+from_currency = input("From currency (e.g., USD): ")
+to_currency = input("To currency (e.g., INR): ")
+
+# Example fixed exchange rates
+usd_to_inr = 83
+inr_to_usd = 1 / 83
+
+if from_currency == "USD" and to_currency == "INR":
+    result = amount * usd_to_inr
+    print("Converted Amount =", result)
+
+elif from_currency == "INR" and to_currency == "USD":
+    result = amount * inr_to_usd
+    print("Converted Amount =", result)
+
+else:
+    print("Conversion not supported")
+
+o/p:
+Currency Converter
+Enter amount: 45000
+From currency (e.g., USD): 42000
+To currency (e.g., INR): 12000
+Conversion not supported
+
+
+43)"Write a program to calculate the sum, difference, product, quotient, and remainder of two numbers.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+print("Sum =", a + b)
+print("Difference =", a - b)
+print("Product =", a * b)
+
+if b != 0:
+    print("Quotient =", a / b)
+    print("Remainder =", a % b)
+else:
+    print("Division not possible (division by zero)")
+
+o/p:
+Enter first number: 4
+Enter second number: 2
+Sum = 6.0
+Difference = 2.0
+Product = 8.0
+Quotient = 2.0
+Remainder = 0.0
+
+44)Find the area and perimeter of a rectangle using arithmetic operators.
+length = float(input("Enter length: "))
+breadth = float(input("Enter breadth: "))
+
+area = length * breadth
+perimeter = 2 * (length + breadth)
+
+print("Area =", area)
+print("Perimeter =", perimeter)
+
+o/p:
+Enter length: 5
+Enter breadth: 3
+Area = 15.0
+Perimeter = 16.0
+
+45)Calculate the simple interest for given principal, rate, and time.
+P = float(input("Enter Principal: "))
+R = float(input("Enter Rate of Interest: "))
+T = float(input("Enter Time (years): "))
+
+SI = (P * R * T) / 100
+
+print("Simple Interest =", SI)
+
+o/p:
+Enter Principal: 56
+Enter Rate of Interest: 42
+Enter Time (years): 26
+Simple Interest = 611.52
