@@ -1,0 +1,708 @@
+1)Copy a list using copy().
+list1 = [10, 20, 30, 40]
+list2 = list1.copy()
+print("Original list:", list1)
+print("Copied list  :", list2)
+
+o/p:
+Original list: [10, 20, 30, 40]
+Copied list  : [10, 20, 30, 40
+
+2)Copy a list using slicing.
+list1 = [10, 20, 30, 40, 50]
+list2 = list1[:]
+print("Original list:", list1)
+print("Copied list  :", list2)
+
+o/p:
+Original list: [10, 20, 30, 40, 50]
+Copied list  : [10, 20, 30, 40, 50]
+
+3)Print numbers from 1 to 10.
+for i in range(1, 11):
+    print(i)
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+4)Print the multiplication table of a number.
+n = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(n, "x", i, "=", n * i)
+
+o/p:
+Enter a number: 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+5)Print all elements of a list.
+numbers = [10, 20, 30, 40, 50]
+for item in numbers:
+    print(item)
+
+o/p:
+10
+20
+30
+40
+50
+
+6)Find the largest element in a list.
+numbers = [10, 45, 23, 89, 5, 67]
+largest = numbers[0]
+for num in numbers:
+    if num > largest:
+        largest = num
+print("Largest element is:", largest)
+
+o/p:
+Largest element is: 89
+
+7)Count vowels in a string.
+text = input("Enter a string: ")
+count = 0
+for ch in text:
+    if ch.lower() in "aeiou":
+        count += 1
+print("Number of vowels:", count)
+o/p:
+Enter a string: kani
+Number of vowels: 2
+
+8)Print each character on a new line.
+text = input("Enter a string: ")
+for ch in text:
+    print(ch)
+
+o/p:
+Enter a string: shivanya
+s
+h
+i
+v
+a
+n
+y
+a
+
+9)Print all tuple elements.
+t = (10, 20, 30, 40, 50)
+for item in t:
+    print(item)
+
+o/p:
+10
+20
+30
+40
+50
+
+10)Create a parent class Shape and child classes:
+class Shape:
+    def area(self):
+        print("Area of shape")
+class Circle(Shape):
+    def __init__(self, r):
+        self.r = r
+    def area(self):
+        print("Circle area:", 3.14 * self.r * self.r)
+class Rectangle(Shape):
+    def __init__(self, l, b):
+        self.l = l
+        self.b = b
+
+    def area(self):
+        print("Rectangle area:", self.l * self.b)
+c = Circle(5)
+r = Rectangle(4, 6)
+c.area()
+r.area()
+
+o/p:
+Circle area: 78.5
+Rectangle area: 24
+
+11)Circle
+import math
+radius = 5.345  
+area = math.pi * radius * radius
+print("Radius: {:.6f}".format(radius))
+print("Area: {:.6f}".format(area))
+
+o/p:
+Radius: 5.345000
+Area: 89.752232
+
+12)Rectangle
+t = int(input())
+for _ in range(t):
+    a, b, c, d = map(int, input().split())
+    sides = sorted([a, b, c, d])
+    if sides[0] == sides[1] and sides[2] == sides[3]:
+        print("YES")
+    else:
+        print("NO")
+o/p:
+YES
+YES
+NO
+
+13)Triangle
+class Shape:
+    def area(self):
+        print("Calculating area of shape")
+class Triangle(Shape):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+    def area(self):
+        print("Area of Triangle:", 0.5 * self.base * self.height)
+t = Triangle(10, 5)
+t.area()
+
+o/p:
+Area of Triangle: 25.0
+
+14)Each child should have its own method to calculate area.
+class Shape:
+    def area(self):
+        print("Area calculation of shape")
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        print("Area of Circle:", 3.14 * self.radius * self.radius)
+class Rectangle(Shape):
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    def area(self):
+        print("Area of Rectangle:", self.length * self.breadth)
+class Triangle(Shape):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+    def area(self):
+        print("Area of Triangle:", 0.5 * self.base * self.height)
+c = Circle(5)
+r = Rectangle(4, 6)
+t = Triangle(10, 5)
+c.area()
+r.area()
+t.area()
+o/p:
+Area of Circle: 78.5
+Area of Rectangle: 24
+Area of Triangle: 25.0
+
+15)Create a hybrid inheritance structure involving:
+class Person:
+    def display_person(self):
+        print("I am a person")
+class Student(Person):
+    def display_student(self):
+        print("I am a student")
+class Employee(Person):
+    def display_employee(self):
+        print("I am an employee")
+class Intern(Student, Employee):
+    def display_intern(self):
+        print("I am an intern (student + employee)")
+i = Intern()
+i.display_person()
+i.display_student()
+i.display_employee()
+i.display_intern()
+
+o/p:
+I am a person
+I am a student
+I am an employee
+I am an intern (student + employee)
+
+16)Person
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+p = Person(name, age)
+p.display()
+
+o/p:
+Enter name: Kani
+Enter age: 20
+Name: Kani
+Age: 20
+
+17)Student
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+name = input("Enter student name: ")
+marks = int(input("Enter marks: "))
+s = Student(name, marks)
+s.display()
+
+o/p:
+Enter student name: Kani
+Enter marks: 85
+Name: Kani
+Marks: 85
+
+18)Teacher
+class Teacher:
+    def __init__(self, name, subject):
+        self.name = name
+        self.subject = subject
+    def display(self):
+        print("Teacher Name:", self.name)
+        print("Subject:", self.subject)
+name = input("Enter teacher name: ")
+subject = input("Enter subject: ")
+t = Teacher(name, subject)
+t.display()
+
+o/p:
+Enter teacher name: Ram
+Enter subject: Mathematics
+Teacher Name: Ram
+Subject: Mathematics
+
+19)TeachingAssistant
+class Teacher:
+    def __init__(self, name, subject):
+        self.name = name
+        self.subject = subject
+    def display_teacher(self):
+        print("Teacher Name:", self.name)
+        print("Subject:", self.subject)
+class TeachingAssistant(Teacher):
+    def __init__(self, name, subject, hours):
+        super().__init__(name, subject)
+        self.hours = hours
+
+    def display_ta(self):
+        self.display_teacher()
+        print("Working Hours:", self.hours)
+name = input("Enter name: ")
+subject = input("Enter subject: ")
+hours = int(input("Enter working hours: "))
+ta = TeachingAssistant(name, subject, hours)
+ta.display_ta()
+
+o/p:
+Enter name: Kani
+Enter subject: Python
+Enter working hours: 6
+Teacher Name: Kani
+Subject: Python
+Working Hours: 6
+
+20)Demonstrate access to methods from multiple inheritance paths.
+class Father:
+    def skill_father(self):
+        print("Father's skill: Driving")
+class Mother:
+    def skill_mother(self):
+        print("Mother's skill: Cooking")
+class Child(Father, Mother):
+    def skill_child(self):
+        print("Child has mixed skills")
+c = Child()
+c.skill_father()
+c.skill_mother()
+c.skill_child()
+
+o/p:
+Father's skill: Driving
+Mother's skill: Cooking
+Child has mixed skills
+
+21)Create a parent class Animal with method sound(). Override the method in child classes Dog and Cat with their respective sounds.
+class Animal:
+    def sound(self):
+        print("Animals make sound")
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks: Woof Woof")
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows: Meow Meow")
+a = Animal()
+d = Dog()
+c = Cat()
+a.sound()
+d.sound()
+c.sound()
+
+o/p:
+Animals make sound
+Dog barks: Woof Woof
+Cat meows: Meow Meow
+
+22)Create a parent class Person with a constructor that initializes name and age. Use super() in the child class Student to initialize parent attributes and add a student ID.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_person(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)   # Initialize parent class attributes
+        self.student_id = student_id
+
+    def display_student(self):
+        self.display_person()
+        print("Student ID:", self.student_id)
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+student_id = input("Enter student ID: ")
+s = Student(name, age, student_id)
+s.display_student()
+
+o/p:
+Enter name: Kani
+Enter age: 20
+Enter student ID: S101
+Name: Kani
+Age: 20
+Student ID: S101
+
+23)Student Record Management System
+Insert student records
+Search student records
+Update student information
+Delete student records
+
+students = {}
+def insert():
+    sid = input("Enter Student ID: ")
+    name = input("Enter Name: ")
+    age = int(input("Enter Age: "))
+    
+    students[sid] = {"name": name, "age": age}
+    print("Student record inserted successfully!")
+def search():
+    sid = input("Enter Student ID to search: ")
+    if sid in students:
+        print("Student Found:", students[sid])
+    else:
+        print("Student not found")
+def update():
+    sid = input("Enter Student ID to update: ")
+    if sid in students:
+        name = input("Enter new name: ")
+        age = int(input("Enter new age: "))
+        students[sid] = {"name": name, "age": age}
+        print("Student record updated successfully!")
+    else:
+        print("Student not found")
+def delete():
+    sid = input("Enter Student ID to delete: ")
+    if sid in students:
+        del students[sid]
+        print("Student record deleted successfully!")
+    else:
+        print("Student not found")
+while True:
+    print("\n--- Student Record System ---")
+    print("1. Insert")
+    print("2. Search")
+    print("3. Update")
+    print("4. Delete")
+    print("5. Exit")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        insert()
+    elif choice == "2":
+        search()
+    elif choice == "3":
+        update()
+    elif choice == "4":
+        delete()
+    elif choice == "5":
+        print("Exiting program...")
+        break
+    else:
+        print("Invalid choice!")
+
+o/p:
+--- Student Record System ---
+1. Insert
+2. Search
+3. Update
+4. Delete
+5. Exit
+Enter your choice: 1
+Enter Student ID: 105
+Enter Name: joe
+Enter Age: 20
+Student record inserted successfully!
+
+--- Student Record System ---
+1. Insert
+2. Search
+3. Update
+4. Delete
+5. Exit
+Enter your choice: 5
+Exiting program...
+
+24)Draw a Doubly Linked List with 5 nodes.
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" <-> ")
+            temp = temp.next
+        print("NULL")
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(50)
+dll.display()
+
+o/p:
+10 <-> 20 <-> 30 <-> 40 <-> 50 <-> NULL
+
+25)Explain the role of prev and next pointers.
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None   # points to previous node
+        self.next = None   # points to next node
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node   
+        new_node.prev = temp    
+    def display_forward(self):
+        print("Forward Traversal:")
+        temp = self.head
+        last = None
+        while temp:
+            print(temp.data, end=" <-> ")
+            last = temp
+            temp = temp.next
+        print("NULL")
+        return last  # return last node
+    def display_backward(self, tail):
+        print("Backward Traversal:")
+        temp = tail
+        while temp:
+            print(temp.data, end=" <-> ")
+            temp = temp.prev
+        print("NULL")
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(50)
+tail = dll.display_forward()
+dll.display_backward(tail)
+
+o/p:
+Forward Traversal:
+10 <-> 20 <-> 30 <-> 40 <-> 50 <-> NULL
+Backward Traversal:
+50 <-> 40 <-> 30 <-> 20 <-> 10 <-> NULL
+
+26)Identify the head and tail nodes in a Doubly Linked List.
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+    def find_head_tail(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        head_node = self.head
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        tail_node = temp
+        print("Head Node:", head_node.data)
+        print("Tail Node:", tail_node.data)
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(50)
+dll.find_head_tail()
+
+o/p:
+Head Node: 10
+Tail Node: 50
+
+27)Show the memory representation of a Doubly Linked List.
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+    def display_memory(self):
+        temp = self.head
+        print("Memory Representation:\n")
+        while temp:
+            prev_addr = id(temp.prev) if temp.prev else None
+            next_addr = id(temp.next) if temp.next else None
+            print(f"[Prev: {prev_addr} | Data: {temp.data} | Next: {next_addr}]")
+            temp = temp.next
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(50)
+dll.display_memory()
+
+o/p:
+Memory Representation:
+
+[Prev: None | Data: 10 | Next: 132817312111632]
+[Prev: 132817312111584 | Data: 20 | Next: 132817312111680]
+[Prev: 132817312111632 | Data: 30 | Next: 132817312111728]
+[Prev: 132817312111680 | Data: 40 | Next: 132817312111776]
+[Prev: 132817312111728 | Data: 50 | Next: None]
+
+
+28)Compare Doubly Linked List and Array.
+# ---------------- ARRAY (LIST) ----------------
+print("ARRAY (LIST) OPERATIONS")
+arr = [10, 20, 30, 40]
+print("Original Array:", arr)
+print("Access element at index 2:", arr[2])
+arr.insert(2, 25)
+print("After insertion:", arr)
+arr.remove(30)
+print("After deletion:", arr)
+# ---------------- DOUBLY LINKED LIST ----------------
+print("\nDOUBLY LINKED LIST OPERATIONS")
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" <-> ")
+            temp = temp.next
+        print("NULL")
+dll = DoublyLinkedList()
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+print("Original DLL:")
+dll.display()
+
+o/p:
+ARRAY (LIST) OPERATIONS
+Original Array: [10, 20, 30, 40]
+Access element at index 2: 30
+After insertion: [10, 20, 25, 30, 40]
+After deletion: [10, 20, 25, 40]
+
+DOUBLY LINKED LIST OPERATIONS
+Original DLL:
+10 <-> 20 <-> 30 <-> 40 <-> NULL
